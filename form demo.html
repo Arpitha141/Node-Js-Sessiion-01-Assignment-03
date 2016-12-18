@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Form Demo</title>
+<script language="javascript">
+function checkEmail(inputvalue){	
+    var pattern=/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+    if(pattern.test(inputvalue)){         
+		   
+    }else{   
+		alert("Incorrect email address"); 
+    }
+}
+</script>
+</head>
+<body>
+<fieldset>
+    <legend>Form Validation </legend>
+<form name="signupform">
+Name: <input type="text" required><br><br>
+Email: <input name="email" type="text" id="email_address" required><br><br>
+phone :<input type="text" id="text" required><br><br>
+address : <input type="text" id="text" required><br><br>
+<input name="submit" type="submit" value="Submit" onClick="checkEmail(document.signupform.email.value)">  
+</fieldset>  
+</form></body></html>
